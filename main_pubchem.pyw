@@ -200,9 +200,9 @@ def draw_mainframe():
                 line+=x+'\n'
             compound_GHS = line
             if compound_CMR:
-                compound_CMR = "Ja"
+                compound_CMR = "Yes"
             else:
-                compound_CMR = "Nee"
+                compound_CMR = "No"
             name_lbl.config(text=compound_name)
             class_lbl.config(text=compound_class)
             CMR_lbl.config(text=compound_CMR)
@@ -286,6 +286,7 @@ draw_mainframe()
 
 
 gui.mainloop()
+
 
 
 
