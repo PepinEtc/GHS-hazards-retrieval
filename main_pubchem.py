@@ -4,20 +4,20 @@ try:
     import requests
 except(ImportError):
     print(f'[DEBUG] Dependency "requests" not found, installing...')
-    os.system("pip install requests")
+    os.system("python.exe -m pip install requests")
     import requests
 try:
     import pubchempy
 except(ImportError):
     print(f'[DEBUG] Dependency "pubchempy" not found, installing...')
-    os.system("pip install pubchempy")
+    os.system("python.exe -m pip install pubchempy")
     import pubchempy
 
 try:
     from PIL import Image, ImageTk
 except(ImportError):
     print(f'[DEBUG] Dependency "pillow" not found, installing...')
-    os.system("pip install pillow")
+    os.system("python.exe -m pip install pillow")
     from PIL import Image, ImageTk
 
 import json
