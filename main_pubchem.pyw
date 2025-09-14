@@ -81,6 +81,7 @@ class compoundObj:
         self.propeties_template = {"Name": self.name, "Formula": self.formula, "GHS_class": self.Avans_class["Class"],"CMR": self.Avans_class["CMR"], "GHS_hazards": self.GHS_text , "Molar_mass": self.weight, "Smiles": self.smiles, "PubchemCID": self.CID, "MoleculeIMG": self.image, "credits": 'Pepin :P'}
         self.make_propeties_folder() #-> doesn't work if disabled in settings
     def search(name):
+        name = name.lower()
         results = pubchempy.get_compounds(name, 'name')
         return compoundObj(results[0])
     
@@ -285,6 +286,7 @@ draw_mainframe()
 
 
 gui.mainloop()
+
 
 
 
