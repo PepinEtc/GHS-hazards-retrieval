@@ -159,6 +159,9 @@ class compoundObj:
                 response = requests.get(self.image)
                 img = Image.open(BytesIO(response.content))
                 img.save(f'{DEFAULT_COMPOUND_DIR}/{self.name}/{self.name}.png')
+                file = open(f'{DEFAULT_COMPOUND_DIR}/{self.name}/{self.name}.url', 'w') #-> internet shortcut
+                file.write(f'[InternetShortcut]\nURL=https://pubchem.ncbi.nlm.nih.gov/compound/{self.CID}\n')
+                file.close()
             except(FileExistsError):
                 pass #-> dir is already made
 
